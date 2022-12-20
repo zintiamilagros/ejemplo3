@@ -34,3 +34,10 @@ void burbuja(int arreglo[],int longitud)
         }
     }
 }
+
+void intercambiar(int* a, int* b)
+{
+    int temporal = *a;
+    *a = *b;
+    *b = temporal;
+}
