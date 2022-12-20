@@ -1,6 +1,8 @@
 #include <stdio.h>
+
 void burbuja(int arreglo[],int longitud);
-//void intercambiar(int*a, int*b);
+void intercambiar(int*a, int*b);
+
 int main(void)
 {
     printf("programa para ordenar datos en un arrehglo");
@@ -21,12 +23,12 @@ int main(void)
     printf("\n");
 
     burbuja(num_ordenar, longitud_arreglo);
-    printf("arreglo ordenar");
+    printf("arreglo ordenado");
     printf("\n");
     printf("datos ordenados en el arreglo: ");
     for(int i = 0; i < longitud_arreglo; i++)
     {
-        printf("%d ",num_ordenar[1]);
+        printf("%d ",num_ordenar[i]);
     }
     printf("\n");
     printf("fin del programa");
@@ -43,10 +45,7 @@ void burbuja(int arreglo[],int longitud)
         {
            if(arreglo[k] > arreglo[k+1])
            {
-             
-               printf("aqui se implementa intercambiar");
-               printf("\n");
-            //intercambiar(&arreglo[k],&arreglo[k+1]);
+                intercambiar(&arreglo[k],&arreglo[k+1]);
            }
         }
     }
